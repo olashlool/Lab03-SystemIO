@@ -8,15 +8,15 @@ namespace Lab03_SystemIO
         {
             try
             {
-                //InputNumber();
-                //Console.WriteLine("=======================================================");
-                //GetNumberForAverageNumber();
-                //Console.WriteLine("=======================================================");
-                //Shape();
-                //Console.WriteLine("=======================================================");
-                //int[] arrNum = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
-                //Console.WriteLine($"The Most Frequency Number: {MostCommonNumber(arrNum)}");
-                //Console.WriteLine("=======================================================");
+                InputNumber();
+                Console.WriteLine("=======================================================");
+                GetNumberForAverageNumber();
+                Console.WriteLine("=======================================================");
+                Shape();
+                Console.WriteLine("=======================================================");
+                int[] arrNum = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
+                Console.WriteLine($"The Most Frequency Number: {MostCommonNumber(arrNum)}");
+                Console.WriteLine("=======================================================");
                 int[] arrNum1 = { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
                 for (int i = 0; i < arrNum1.Length; i++)
                 {
@@ -24,15 +24,15 @@ namespace Lab03_SystemIO
                 }
                 Console.WriteLine();
                 Console.WriteLine($"The Max Number in array is: {GetMaxNumber(arrNum1)}");
-                //Console.WriteLine("=======================================================");
-                //WriteInExternalFile();
-                //Console.WriteLine("=======================================================");
-                //ReadInExternalFile();
-                //Console.WriteLine("=======================================================");
-                //RemoveFirstWord();
-                //Console.WriteLine("=======================================================");
-                //Inputword();
-                //Console.WriteLine("=======================================================");
+                Console.WriteLine("=======================================================");
+                WriteInExternalFile();
+                Console.WriteLine("=======================================================");
+                ReadInExternalFile();
+                Console.WriteLine("=======================================================");
+                RemoveFirstWord();
+                Console.WriteLine("=======================================================");
+                Inputword();
+                Console.WriteLine("=======================================================");
             }
             catch (Exception e)
             {
@@ -189,8 +189,9 @@ namespace Lab03_SystemIO
             Console.Write("Enter word to saves that into an external file: ");
             string path = "../../../words.txt";
             string word = Console.ReadLine();
+            File.AppendAllText(path, "\n");
+            File.AppendAllText(path, word);
 
-            File.WriteAllText(path, word);
         }
         // Challenge 7
         public static void ReadInExternalFile()
